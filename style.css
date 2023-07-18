@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header1 {
+    color: white;
+    display: block;
+    background-color: #f7941d;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.header1 a {
+    color: white;
+}
+
+.header2 {
+    height: 120px;
+    position: absolute;
+    right: 0px;
+    top: 39px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-head {
+    width: 15%;
+    margin-left: 20px;
+}
+
+nav {
+    display: flex;
+    margin-right: 20px;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    margin-top: 25px;
+}
+
+.menu ul li {
+    margin-right: 50px;
+}
+
+.menu ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 125%;
+}
+
+@media only screen and (max-width: 768px) {
+    .img-head {
+        width: 8%;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: #f7941d;
+        width: 100%;
+        top: 100px;
+        left: 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .menu ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu ul li a {
+        display: block;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    #menu-toggle:checked~.menu {
+        display: flex;
+    }
+}
+
+.language-options {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    gap: 10px;
+    margin-right: 65px;
+}
+
+.language-options a {
+    text-decoration: none;
+    color: gray;
+}
+
+.carousel {
+    width: 95%;
+    display: block;
+    margin-top: 155px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel img {
+    width: 100%;
+    display: none;
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+.carousel-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.carousel-button:hover {
+    color: #38a5d4;
+}
+
+.carousel-button.prev-button {
+    left: 70px;
+}
+
+.carousel-button.next-button {
+    right: 70px;
+}
+
+.typewriter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 0.15em;
+    animation: typing 3.5s steps(40);
+}
+
+
+@keyframes typing {
+    from {
+        width: 10%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-left {
+    margin-right: 30px;
+    display: block;
+    color: #38a5d4;
+    border: 2px solid #38a5d4;
+}
+
+.bottom-right {
+    display: block;
+    color: #f52e74;
+    border: 2px solid #f52e74;
+}
+
+.bottom-left:hover {
+    margin-right: 30px;
+    display: block;
+    color: white;
+    background-color: #38a5d4;
+    border: 2px solid #38a5d4;
+    cursor: pointer;
+}
+
+.bottom-right:hover {
+    display: block;
+    color: white;
+    background-color: #f52e74;
+    border: 2px solid #f52e74;
+    cursor: pointer;
+}
+
+
+.bottom-left,
+.bottom-right {
+    padding: 20px;
+    border-radius: 9px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 300px;
+    word-wrap: break-word;
+}
+
+.bottom-left div:first-child,
+.bottom-right div:first-child {
+    font-size: 18px;
+    margin-bottom: 12px;
+    margin-top: -5px;
+}
+
+.bottom-left div:last-child,
+.bottom-right div:last-child {
+    font-size: 21px;
+    margin-bottom: -10px;
+}
+
+.bottom-left,
+.bottom-right {
+    position: relative;
+}
+
+.bottom-left .fun-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    color: #38a5d4;
+}
+
+.bottom-right .medical-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    color: #f52e74;
+}
