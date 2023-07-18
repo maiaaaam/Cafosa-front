@@ -67,28 +67,24 @@
             var images = carousel.getElementsByTagName("img");
             var currentImageIndex = 0;
 
-            // Function to show the next image
             function showNextImage() {
                 images[currentImageIndex].classList.remove("active");
                 currentImageIndex = (currentImageIndex + 1) % images.length;
                 images[currentImageIndex].classList.add("active");
             }
 
-            // Event listener for next button
             document.getElementById("nextBtn").addEventListener("click", function () {
                 images[currentImageIndex].classList.remove("active");
                 currentImageIndex = (currentImageIndex + 1) % images.length;
                 images[currentImageIndex].classList.add("active");
             });
 
-            // Event listener for previous button
             document.getElementById("prevBtn").addEventListener("click", function () {
                 images[currentImageIndex].classList.remove("active");
                 currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
                 images[currentImageIndex].classList.add("active");
             });
 
-            // Start the carousel
             setInterval(showNextImage, 3000);
         });
     </script>
